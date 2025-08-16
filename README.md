@@ -56,7 +56,7 @@ hangman/
 
 Clone the repository:
 
-git clone https://github.com/your-username/hangman.git
+git clone https://github.com/Lakshmikala43/CodeAlpha_hangman_game/commit/a95f50f37180fb9bbc7f7c9d1b1beb546c326822
 cd hangman
 
 
