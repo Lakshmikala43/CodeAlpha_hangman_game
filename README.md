@@ -20,8 +20,6 @@ How to Play
 
 Example Gameplay
 
-Screenshots (ASCII Art)
-
 Future Improvements
 
 License
@@ -100,20 +98,6 @@ Guess a letter: z
 Word:  a _ _ _ _
 Wrong guesses left: 5
 ...
-
-🖼 Screenshots (ASCII Art)
-
-If you want to make it more fun, you can add ASCII art for each wrong guess stage, for example:
-
-Stage 0 (Start):       Stage 3:           Stage 6 (Game Over):
-
-  +---+                +---+              +---+
-  |   |                |   |              |   |
-      |                O   |              O   |
-      |               /|\  |             /|\  |
-      |               /    |             / \  |
-      |                    |                  |
-=========            =========          =========
 
 🚀 Future Improvements
 
