@@ -1,0 +1,52 @@
+import random
+
+def hangman():
+    # Step 1: Word list
+    words = ["apple", "beautiful", "pink", "orange", "mango"]
+    word_to_guess = random.choice(words)
+
+    # Step 2: Setup
+    guessed_word = ["_"] * len(word_to_guess)
+    wrong_guesses = 0
+    max_guesses = 6
+    guessed_letters = []
+
+    print("Welcome to Hangman!")
+    print("You have 6 chances to guess the word.")
+
+    # Step 3: Main loop
+    while wrong_guesses < max_guesses and "_" in guessed_word:
+        print("\nWord: ", " ".join(guessed_word))
+        print("Wrong guesses left:", max_guesses - wrong_guesses)
+        guess = input("Guess a letter: ").lower()
+
+        # Check valid input
+        if len(guess) != 1 or not guess.isalpha():
+            print("❌ Please enter a single letter.")
+            continue
+
+        # Already guessed?
+        if guess in guessed_letters:
+            print("⚠️ You already guessed that letter.")
+            continue
+
+        guessed_letters.append(guess)
+
+        # Correct guess
+        if guess in word_to_guess:
+            for i, letter in enumerate(word_to_guess):
+                if letter == guess:
+                    guessed_word[i] = guess
+            print("✅ Correct!")
+        else:
+            wrong_guesses += 1
+            print("❌ Wrong guess!")
+
+    # Step 4: End
+    if "_" not in guessed_word:
+        print("\n🎉 You win! The word was:", word_to_guess)
+    else:
+        print("\n💀 You lose! The word was:", word_to_guess)
+
+# Run the game
+hangman()
